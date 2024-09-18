@@ -20,4 +20,5 @@ public class Invoice {
     private String name;
     private String location;
     private Double amount;
+    private String photoName;
 }

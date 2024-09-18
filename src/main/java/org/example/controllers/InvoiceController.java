@@ -29,18 +29,9 @@ public class InvoiceController {
     }
 
     @PostMapping("/save")
-    public String saveInvoice(
-            @ModelAttribute Invoice invoice,
-            //Model model,
-            RedirectAttributes attributes
-    ) {
-        service.saveInvice(invoice);
+    public String saveInvoice(@ModelAttribute Invoice invoice, RedirectAttributes attributes) {
         Long id = service.saveInvice(invoice).getId();
-        //String message = "Record with id : '"+id+"' is saved successfully !";
-        //model.addAttribute("message", message);
-        //return "registerInvoicePage";
-
-        attributes.addAttribute("message", "Record with id : '"+id+"' is saved successfully !");
+        attributes.addAttribute("message", "Record with id : '" + id + "' is saved successfully!");
         return "redirect:getAllInvoices";
     }
 
@@ -99,4 +90,5 @@ public class InvoiceController {
         }
         return "redirect:getAllInvoices";
     }
+
 }
