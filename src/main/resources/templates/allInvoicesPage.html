@@ -22,17 +22,13 @@
             <th>Name</th>
             <th>Location</th>
             <th>Amount</th>
-            <th>Photo</th>
             <th>Edit/Delete</th>
           </tr>
           <tr th:each="ob:${list}">
-            <td th:text="ob+${id}"></td>
-            <td th:text="ob+${name}"></td>
-            <td th:text="ob+${location}"></td>
-            <td th:text="ob+${amount}"></td>
-            <td>
-              <img th:src="@{'/uploads/' + ${invoice.photoName}}" alt="Photo" width="100">
-            </td>
+            <td th:text="${ob.id}"></td>
+            <td th:text="${ob.name}"></td>
+            <td th:text="${ob.location}"></td>
+            <td th:text="${ob.amount}"></td>
             <td><a th:href="@{/invoice/delete(id=${ob.id})}" class= "btn btn-danger">DELETE <i class="fa fa-trash-o" aria-hidden="true"></i></a> |
               <a th:href="@{/invoice/edit(id=${ob.id})}" class="btn btn-warning">EDIT <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
           </tr>

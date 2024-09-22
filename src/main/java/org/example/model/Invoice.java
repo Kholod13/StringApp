@@ -21,4 +21,8 @@ public class Invoice {
     private String location;
     private Double amount;
     private String photoName;
+
+    public void setFileName(String fileName) {
+
+    }
 }

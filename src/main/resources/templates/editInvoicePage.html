@@ -24,7 +24,7 @@
               <label for="id">ID</label>
             </div>
             <div class="col-4">
-              <input type="text" th:field="*{id}" id="id" class="form-control" readonly/>
+              <input type="text" th:field="${id}" id="id" class="form-control" readonly/>
             </div>
           </div><br/>
           <div class="row">
@@ -32,7 +32,7 @@
               <label for="name">NAME</label>
             </div>
             <div class="col-4">
-              <input type="text" th:field="*{name}" id="name" class="form-control"/>
+              <input type="text" th:field="${name}" id="name" class="form-control"/>
             </div>
           </div><br/>
           <div class="row">
@@ -40,7 +40,7 @@
               <label for="location">LOCATION</label>
             </div>
             <div class="col-4">
-              <input type="text" th:field="*{location}" id="location" class="form-control"/>
+              <input type="text" th:field="${location}" id="location" class="form-control"/>
             </div>
           </div><br/>
           <div class="row">
@@ -48,7 +48,7 @@
               <label for="amount">AMOUNT</label>
             </div>
             <div class="col-4">
-              <input type="text" th:field="*{amount}" id="amount" class="form-control" />
+              <input type="text" th:field="${amount}" id="amount" class="form-control" />
             </div>
           </div> <br/>
           <button type="submit" class="btn btn-success">Update <i class="fa fa-wrench" aria-hidden="true"></i></button>
